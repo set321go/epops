@@ -19,6 +19,9 @@ setup(
     url='https://github.com/aedwards/epops',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
-    install_requires=['paramiko', 'pyyaml']
+    install_requires=['paramiko', 'pyyaml'],
+    entry_points={
+        'console_scripts': ['epops=core.core:main']
+    }
 )
 
