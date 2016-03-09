@@ -1,0 +1,6 @@
+.idea/
+dist/
+epops.egg-info/
+build/
+
+*.iml
