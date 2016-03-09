@@ -18,6 +18,7 @@ setup(
     author_email='pd@elasticpath.com',
     url='https://github.com/aedwards/epops',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=find_packages(exclude=('tests', 'docs')),
+    install_requires=['paramiko', 'pyyaml']
 )
 
