@@ -9,7 +9,7 @@ class SequentialScheduler(Scheduler, Processor):
         self.tasks = collections.deque()
 
     def add_task(self, task):
-        super().add_task()
+        super().add_task(task)
 
     def run(self):
         super().run()
