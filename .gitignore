@@ -2,5 +2,6 @@
 dist/
 epops.egg-info/
 build/
+venv/
 
 *.iml
