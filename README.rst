@@ -1,3 +1,4 @@
+===============================
 Ep Operations Tooling Framework
 ===============================
 
@@ -6,7 +7,8 @@ This project is a plugable framework for operation related workflows and devops 
 Setup
 -----
 
-### OSX
+OSX
+~~~
 
 Your going to need xcode or some flavour of it that at least has the gcc libs.
 If you already have that use homebrew to install python3
@@ -15,18 +17,21 @@ If you already have that use homebrew to install python3
 
 Homebrew will also install pip (pacakge manager), setuptools and venv.
 
-### Ubuntu
+Ubuntu
+~~~~~~
 
 Install python3 from the package manager, ubuntu setup for python 2 otb and needs some massaging to get things going.
 
-### Windoze
+Windoze
+~~~~~~~
 
 TBD
 
 Build
 -----
 
-### Setup your venv
+Setup your venv
+~~~~~~~~~~~~~~~
 
 Run the relevant script from the `local` dir in this project from the top level of this project. You should end up with a new
 directory in your project called `myvenv` that contains the virtual environment for this project.
