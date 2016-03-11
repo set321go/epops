@@ -21,4 +21,3 @@ class SequentialScheduler(Scheduler, Processor):
             current_task = self.tasks.pop()
             logging.info("Starting task: %s", current_task)
             current_task.run()
-
