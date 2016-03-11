@@ -36,13 +36,19 @@ Setup your venv
 Run the relevant script from the `local` dir in this project from the top level of this project. You should end up with a new
 directory in your project called `myvenv` that contains the virtual environment for this project.
 
+Commands
+~~~~~~~~
 
-You might need to run this as sudo. Its going to install the test libs and run the tests. To build the distributable egg
+You might need to run this as sudo if your not using venv. Its going to install the test libs and run the tests.
 
-   python3 setup.py develop
+   python setup.py develop
 
-At present the tests are managed seperately through make
+To run tests
 
-   make
+   python setup.py test
 
+To build the distributable egg
+
+   python setup.py install
+   
 
