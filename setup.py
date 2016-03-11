@@ -19,6 +19,10 @@ setup(
     url='https://github.com/aedwards/epops',
     license=license,
     packages=find_packages(exclude=('tests', 'docs')),
+    test_suite='nose.collector',
+    tests_require=[
+        'nose',
+    ],
     install_requires=[
         'requests',
         'paramiko',
