@@ -1,8 +1,8 @@
 import collections
 import logging
 
-from core.processor.processor import IProcessor
-from core.schedulers.scheduler import IScheduler
+from core.processor.iprocessor import IProcessor
+from core.schedulers.ischeduler import IScheduler
 
 
 class SequentialScheduler(IScheduler, IProcessor):

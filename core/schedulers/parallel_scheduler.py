@@ -1,10 +1,9 @@
-import collections
 import logging
 from queue import Queue
 from threading import Thread
 
-from core.processor.processor import IProcessor
-from core.schedulers.scheduler import IScheduler
+from core.processor.iprocessor import IProcessor
+from core.schedulers.ischeduler import IScheduler
 
 
 class ParallelScheduler(IScheduler, IProcessor):
