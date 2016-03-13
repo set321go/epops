@@ -19,4 +19,6 @@ class Framework(object):
             except yaml.YAMLError as exc:
                 logging.exception('Unable to Load configuration')
 
-    # def start(self):
+    def start(self):
+        for processor in self.ext_manager.get_processors():
+            processor.run()

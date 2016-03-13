@@ -15,3 +15,5 @@ def main():
         print('No config file specified using default (config.yaml)')
 
     framework = Framework(configfile)
+
+    framework.start()

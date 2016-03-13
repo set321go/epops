@@ -25,10 +25,10 @@ class ExtManager(object):
         new_extensions = [x for x in self.extensions if x not in extension_set]
         self.extensions.append(new_extensions)
 
-    def get_schedulers(self):
-        schedulers = []
+    def get_processors(self):
+        processors = []
         for extension in self.extensions:
-            schedulers.append(extension.plugin_object.get_scheduler())
+            processors.append(extension.plugin_object.get_scheduler())
 
-        return schedulers
+        return processors
 
