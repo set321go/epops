@@ -4,7 +4,7 @@ import os.path
 
 class FileWatcher(PatternMatchingEventHandler):
     def __init__(self, ext_manager):
-        super().__init__(['.zip'])
+        super().__init__(['*.zip'])
         self.ext_manager = ext_manager
 
     def on_created(self, event):

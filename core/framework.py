@@ -1,5 +1,6 @@
 import logging
 
+import time
 import yaml
 
 from core.config import YamlConfigs
@@ -28,5 +29,13 @@ class Framework(object):
 
     def start(self):
         logging.info("Starting...")
-        for processor in self.ext_manager.get_processors():
+        for processor in self.ext_manager.get_new_processors():
             processor.run()
+
+        try:
+            while True:
+                time.sleep(10)
+                for processor in self.ext_manager.get_new_processors():
+                    processor.run()
+        except KeyboardInterrupt:
+            logging.critical("Shutting down...")

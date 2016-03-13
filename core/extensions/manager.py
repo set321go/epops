@@ -14,10 +14,11 @@ class ExtManager(object):
         self.loader = ExtensionLoader(config.get_config('core'))
         self.watcher = FileWatcher(self)
         self.extensions = []
+        self.unactivated_extensions = []
 
     def ext_manager_init(self):
         logging.info("Initializing the extension manager")
-        self.extensions = self.loader.ext_init()
+        self.unactivated_extensions = self.loader.ext_init()
         logging.info("Loaded %i extensions", len(self.extensions))
         logging.debug("Finished loading plugins, watching plugin directory %s", self.dir_path[0])
         observer = Observer()
@@ -27,12 +28,13 @@ class ExtManager(object):
     def new_plugin(self, plugin_artifact):
         logging.info("New plugin found: %s", plugin_artifact)
         extension_set = set(self.loader.ext_load_new(plugin_artifact))
-        new_extensions = [x for x in self.extensions if x not in extension_set]
-        self.extensions.append(new_extensions)
+        new_extensions = [x for x in extension_set if x not in self.extensions]
+        self.unactivated_extensions.extend(new_extensions)
 
-    def get_processors(self):
+    def get_new_processors(self):
         processors = []
-        for extension in self.extensions:
+        while self.unactivated_extensions:
+            extension = self.unactivated_extensions.pop()
             extension.plugin_object.activate()
             processors.extend(extension.plugin_object.get_tasks())
 
