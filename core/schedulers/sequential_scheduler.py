@@ -5,7 +5,7 @@ from core.processor.processor import IProcessor
 from core.schedulers.scheduler import IScheduler
 
 
-class SequentialIScheduler(IScheduler, IProcessor):
+class SequentialScheduler(IScheduler, IProcessor):
     def __init__(self):
         self.tasks = collections.deque()
 

@@ -7,7 +7,7 @@ from core.processor.processor import IProcessor
 from core.schedulers.scheduler import IScheduler
 
 
-class ParallelIScheduler(IScheduler, IProcessor):
+class ParallelScheduler(IScheduler, IProcessor):
     def __str__(self):
         return "Parallel Scheduler with: %s" % self.tasks
 

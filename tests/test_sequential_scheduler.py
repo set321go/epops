@@ -1,13 +1,13 @@
 from unittest import TestCase
 from unittest.mock import MagicMock
 
-from core.schedulers.sequential_scheduler import SequentialIScheduler
+from core.schedulers.sequential_scheduler import SequentialScheduler
 
 
 class SequentialSchedulerTestSuite(TestCase):
 
     def setUp(self):
-        self.scheduler = SequentialIScheduler()
+        self.scheduler = SequentialScheduler()
 
     def test_add_tasks(self):
         mock_task = MagicMock()

@@ -1,13 +1,13 @@
 from unittest import TestCase
 from unittest.mock import MagicMock
 
-from core.schedulers.parallel_scheduler import ParallelIScheduler
+from core.schedulers.parallel_scheduler import ParallelScheduler
 
 
 class ParallelSchedulerTestSuite(TestCase):
 
     def setUp(self):
-        self.scheduler = ParallelIScheduler(5)
+        self.scheduler = ParallelScheduler(5)
 
     def test_add_tasks(self):
         mock_task = MagicMock()
