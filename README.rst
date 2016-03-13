@@ -2,6 +2,8 @@
 Operations Tooling Framework
 ===============================
 
+[![Build Status](https://travis-ci.org/set321go/epops.svg?branch=master)](https://travis-ci.org/set321go/epops)
+
 This project is a plugable framework for operation related workflows and devops tasks.
 
 Setup
