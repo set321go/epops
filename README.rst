@@ -4,7 +4,8 @@ Operations Tooling Framework
 
 .. image:: https://travis-ci.org/set321go/epops.svg?branch=master
     :target: https://travis-ci.org/set321go/epops
-.. image:: https://coveralls.io/repos/github/set321go/epops/badge.svg?branch=master :target: https://coveralls.io/github/set321go/epops?branch=master
+.. image:: https://coveralls.io/repos/github/set321go/epops/badge.svg?branch=master 
+    :target: https://coveralls.io/github/set321go/epops?branch=master
 
 This project is a plugable framework for operation related workflows and devops tasks.
 
