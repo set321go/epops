@@ -1,9 +1,9 @@
 import requests
 
-from core.processor.processor import Processor
+from core.processor.processor import IProcessor
 
 
-class HttpUploader(Processor):
+class HttpUploader(IProcessor):
     def __init__(self, file, location, credentials):
         self.credentials = credentials
         self.location = location

@@ -3,11 +3,11 @@ import logging
 from queue import Queue
 from threading import Thread
 
-from core.processor.processor import Processor
-from core.schedulers.scheduler import Scheduler
+from core.processor.processor import IProcessor
+from core.schedulers.scheduler import IScheduler
 
 
-class ParallelScheduler(Scheduler, Processor):
+class ParallelIScheduler(IScheduler, IProcessor):
     def __str__(self):
         return "Parallel Scheduler with: %s" % self.tasks
 

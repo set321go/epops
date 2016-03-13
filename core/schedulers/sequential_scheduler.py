@@ -1,11 +1,11 @@
 import collections
 import logging
 
-from core.processor.processor import Processor
-from core.schedulers.scheduler import Scheduler
+from core.processor.processor import IProcessor
+from core.schedulers.scheduler import IScheduler
 
 
-class SequentialScheduler(Scheduler, Processor):
+class SequentialIScheduler(IScheduler, IProcessor):
     def __init__(self):
         self.tasks = collections.deque()
 
