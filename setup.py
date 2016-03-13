@@ -24,11 +24,11 @@ setup(
         'nose',
     ],
     install_requires=[
-        'requests',
-        'paramiko',
-        'pyyaml',
-        'watchdog',
-        'yapsy'
+        'requests>=2.9.1',
+        'paramiko>=1.16.0',
+        'pyyaml>=3.11',
+        'watchdog>=0.8.3',
+        'yapsy>=1.11.223'
     ],
     entry_points={
         'console_scripts': ['epops=core.main:main']
