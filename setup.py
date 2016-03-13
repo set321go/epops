@@ -26,7 +26,9 @@ setup(
     install_requires=[
         'requests',
         'paramiko',
-        'pyyaml'
+        'pyyaml',
+        'watchdog',
+        'yapsy'
     ],
     entry_points={
         'console_scripts': ['epops=core.main:main']
