@@ -22,12 +22,12 @@ location: 10.10.1.1""")
 
     def test_create_configurations(self):
         result = YamlConfigs(self.configs)
-        self.assert_(result)
+        self.assertTrue(result)
 
     def test_get_existing_configuration(self):
         configs = YamlConfigs(self.configs)
         result = configs.get_config('core')
-        self.assert_(result)
+        self.assertTrue(result)
         self.assertEqual('core', result['id'])
 
     def test_get_missing_configuration(self):
