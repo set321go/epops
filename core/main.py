@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import os
-import sys
+import argparse
+import logging
 
 from core.framework import Framework
 
@@ -8,12 +8,11 @@ defaultConfigFile = 'config.yaml'
 
 
 def main():
-    configfile = sys.argv[0]
+    logging.basicConfig(level=logging.INFO)
+    parser = argparse.ArgumentParser(description="Do something.")
+    parser.add_argument('-c', '--config', required=False, default=defaultConfigFile)
+    args = parser.parse_args()
 
-    if not os.path.exists(configfile):
-        configfile = 'config.yaml'
-        print('No config file specified using default (config.yaml)')
-
-    framework = Framework(configfile)
+    framework = Framework(args.config)
 
     framework.start()

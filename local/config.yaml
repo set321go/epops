@@ -1,0 +1,7 @@
+---
+id: core
+plugin_dir:
+- /Users/set321go/epops/
+---
+id: testing
+text: "My Dummy Plugin"
