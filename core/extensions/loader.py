@@ -14,8 +14,7 @@ class ExtensionLoader(object):
         self.simple_plugin_manager.setPluginInfoExtension('plugin-meta')
         self.simple_plugin_manager.setCategoriesFilter({"Extension": IExtension})
 
-        self.pluginManager = AutoInstallPluginManager(default_dir, self.simple_plugin_manager)
-        self.pluginManager.setInstallDir(default_dir)
+        self.pluginManager = AutoInstallPluginManager(self.plugin_path[0], self.simple_plugin_manager)
 
     def ext_init(self):
         self.simple_plugin_manager.collectPlugins()
