@@ -11,7 +11,7 @@ class TestFileWatcher(TestCase):
         self.mock_manager = MagicMock()
         self.watcher = FileWatcher(self.mock_manager)
 
-    def test_creat_event(self):
+    def test_create_event(self):
         mock_event = MagicMock()
         mock_event.src_path.return_value = 'test-path'
 
